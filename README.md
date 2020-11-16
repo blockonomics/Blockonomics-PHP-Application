@@ -1,14 +1,8 @@
-# Blockonomics PHP Application
-This is a web application developed in PHP that utilizes blockonomics.co's api to automate bitcoin payments.
+# Demo PHP Application
+This is a demo PHP web application that utilizes blockonomics.co's api to automate bitcoin payments.
 
+## Setup
+- Make sure to import the *database.sql* file into your database
+- Set your blockonomics api key in *config.php* and `$secretlocal=your_secret_code`  in *app/check/index.php*
+- Do [blockonomics merchant](https://www.blockonomics.co/merchants) setup and Set the *HTTP Callback URL* to `domain.com/bitcoin/check.php?secret=your_secret_code`
 
-Please follow these instructions for your merchant setup (Setting the callback URL):
-```
-1. Head over to https://www.blockonomics.co/ and login to your merchant account.
-2. Navigate to https://www.blockonomics.co/merchants#/page3 and set the 'Account' property to the target wallet.
-3. Set the 'HTTP Callback URL' to `domain.com/bitcoin/check.php?secret=your_secret_code`, replace `DOMAIN.COM` with your domain or ip address and replace `your_secret_code` with your unique secret code.
-4. Press `Save Changes` and you are set.
-```
-
-Make sure to import the `database.sql` file into your database.
-https://www.blockonomics.co/views/api.html
