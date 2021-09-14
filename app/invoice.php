@@ -114,8 +114,7 @@ if($status == 0){
         // Create socket variables
         if(status < 2 && status != -2){
         var addr =  document.getElementById("address").innerHTML;
-        var timestamp = Math.floor(Date.now() / 1000)-5;
-        var wsuri2 = "wss://www.blockonomics.co/payment/"+ addr+"?timestamp="+timestamp;
+        var wsuri2 = "wss://www.blockonomics.co/payment/"+ addr;
         // Create socket and monitor
         var socket = new WebSocket(wsuri2, "protocolOne")
             socket.onmessage = function(event){
